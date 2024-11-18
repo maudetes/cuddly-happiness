@@ -83,8 +83,6 @@ Trois liens sont alors référencés pour chaque ressource :
 - `/data/` : qui retourne la donnée en tant que telle, paginée et avec des paramètres de filtres et de tris documentés plus bas
 - `/swagger/` : qui retourne la documentation technique de l'accès à la ressource, avec notamment les possibilités de tris et de filtres sur la route `/data/`
 
-**TODO** : s'assurer qu'on a bien enlevé les trailing `/` en prod d'ici là (ou qu'il y a des redirections ? en tout cas harmoniser ce doc)
-
 ### Le profil d'une ressource
 
 Route : `/api/resources/<rid>/profile/`
@@ -125,8 +123,6 @@ On a en plus des informations de description du fichier tabulaire original :
 - pour les csv : `encoding` pour l'encodage utilisé, `separator` pour le séparateur des colonnes (ex : `";"`)
 - pour les fichiers excel : `engine` pour le type de fichier reconnu (xls, xlsx), `sheet_name` pour la page dont sont extraites les données
 - ...
-
-**TODO** : compléter tout ou renvoyer vers une doc. En particulier les formats techniques et métier. Peut-être sous la forme d'un tableau ? @pierlou
 
 ### La donnée par API
 
@@ -221,13 +217,9 @@ Elle précise les différents filtres et tris possibles propre à la ressource s
 
 ## Limites d'utilisation
 
-**TODO** : veut-on mettre un rate-limiting très haut ?
 Si vous pensez avoir un usage massif d'API tabulaire, nous vous invitons à tenir compte du rate-limiting via le header.
-
-## Cas d'usage
-
-**TODO** : veut-on faire un guide ?
+Il est aujourd'hui limité à 100 appels par seconde.
 
 ## Contact
 
-N'hésitez pas à utiliser l'espace discussion en bas de cette page ou à [nous contacter](https://support.data.gouv.fr/).
+N'hésitez pas à utiliser l'espace discussion en bas de cette page ou à nous contacter via [le formulaire de contact](https://support.data.gouv.fr/).
